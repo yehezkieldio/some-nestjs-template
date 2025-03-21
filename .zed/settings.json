@@ -31,7 +31,7 @@
             }
         },
         "TypeScript": {
-            "language_servers": ["typescript-language-server", "eslint"],
+            "language_servers": ["!vtsls", "typescript-language-server", "eslint"],
             "external": {
                 "command": "prettier",
                 "arguments": ["--stdin-filepath", "{buffer_path}"]
