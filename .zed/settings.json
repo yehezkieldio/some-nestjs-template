@@ -1,4 +1,40 @@
 {
     "format_on_save": "on",
-    "language_servers": ["!biome"]
+    "language_servers": [
+        "biome",
+        "typescript-language-server",
+        "json-language-server",
+        "yaml-language-server"
+    ],
+    "languages": {
+        "YAML": {
+            "tab_size": 4
+        },
+        "JSON": {
+            "formatter": {
+                "language_server": {
+                    "name": "biome"
+                }
+            }
+        },
+        "JSONC": {
+            "formatter": {
+                "language_server": {
+                    "name": "biome"
+                }
+            }
+        },
+        "TypeScript": {
+            "formatter": {
+                "language_server": {
+                    "name": "biome"
+                }
+            },
+            "code_actions_on_format": {
+                "source.fixAll.biome": true,
+                "source.organizeImports.biome": true
+            },
+            "format_on_save": "on"
+        }
+    }
 }
