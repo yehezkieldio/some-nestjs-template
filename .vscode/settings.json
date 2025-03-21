@@ -4,43 +4,43 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit",
-        "source.removeUnusedImports": "explicit",
+        "source.removeUnusedImports": "explicit"
     },
     "files.readonlyExclude": {
-        "**/dist/**": true,
+        "**/dist/**": true
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml",
-        "editor.tabSize": 4,
+        "editor.tabSize": 4
     },
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker",
 
         "editor.quickSuggestions": {
-            "strings": true,
-        },
+            "strings": true
+        }
     },
     "json.schemas": [
         {
             "fileMatch": ["bun.lock"],
             "schema": {
-                "allowTrailingCommas": true,
-            },
-        },
-    ],
+                "allowTrailingCommas": true
+            }
+        }
+    ]
 }

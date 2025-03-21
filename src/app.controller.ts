@@ -3,7 +3,7 @@ import { createZodDto } from "nestjs-zod";
 import { z } from "zod";
 
 const HealthCheckSchema = z.object({
-    status: z.literal("ok"),
+    status: z.literal("ok")
 });
 
 class HealthCheckDTO extends createZodDto(HealthCheckSchema) {}
@@ -13,7 +13,7 @@ export class AppController {
     @Get("/health")
     getHealthCheck(): HealthCheckDTO {
         return {
-            status: "ok",
+            status: "ok"
         };
     }
 }

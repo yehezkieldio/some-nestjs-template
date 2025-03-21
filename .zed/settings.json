@@ -1,40 +1,50 @@
 {
     "format_on_save": "on",
-    "language_servers": [
-        "biome",
-        "typescript-language-server",
-        "json-language-server",
-        "yaml-language-server"
-    ],
-    "languages": {
-        "YAML": {
-            "tab_size": 4
-        },
-        "JSON": {
-            "formatter": {
-                "language_server": {
-                    "name": "biome"
-                }
+    "language_servers": ["!biome", "typescript-language-server", "json-language-server"],
+    "lsp": {
+        "biome": {
+            "settings": {
+                "require_config_file": true
             }
         },
+        "eslint": {
+            "settings": {
+                "onIgnoredFiles": "off"
+            }
+        }
+    },
+    "languages": {
         "JSONC": {
-            "formatter": {
-                "language_server": {
-                    "name": "biome"
-                }
+            "language_servers": ["json-language-server"]
+        },
+        "JavaScript": {
+            "language_servers": ["typescript-language-server", "eslint"],
+            "external": {
+                "command": "prettier",
+                "arguments": ["--stdin-filepath", "{buffer_path}"]
+            },
+            "format_on_save": "on",
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+                "source.removeUnusedImports": true,
+                "source.organizeImports": true
             }
         },
         "TypeScript": {
-            "formatter": {
-                "language_server": {
-                    "name": "biome"
-                }
+            "language_servers": ["typescript-language-server", "eslint"],
+            "external": {
+                "command": "prettier",
+                "arguments": ["--stdin-filepath", "{buffer_path}"]
             },
+            "format_on_save": "on",
             "code_actions_on_format": {
-                "source.fixAll.biome": true,
-                "source.organizeImports.biome": true
-            },
-            "format_on_save": "on"
+                "source.fixAll.eslint": true,
+                "source.removeUnusedImports": true,
+                "source.organizeImports": true
+            }
         }
+    },
+    "file_types": {
+        "JSONC": [".swcrc", ".prettierrc"]
     }
 }

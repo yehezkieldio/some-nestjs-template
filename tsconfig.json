@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "NodeNext",
         "declaration": true,
         "removeComments": true,
         "emitDecoratorMetadata": true,
@@ -11,14 +11,17 @@
         "outDir": "./dist",
         "baseUrl": "./",
         "paths": {
-            "#/*": ["./src/*"],
+            "#/*": ["./src/*"]
         },
         "incremental": true,
         "skipLibCheck": true,
         "strictNullChecks": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
         "forceConsistentCasingInFileNames": true,
         "noImplicitAny": false,
         "strictBindCallApply": false,
-        "noFallthroughCasesInSwitch": false,
+        "noFallthroughCasesInSwitch": false
     },
+    "include": ["./", "./eslint.config.mjs", "./jest.config.mjs", "./test/jest.config.e2e.mjs"]
 }

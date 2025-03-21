@@ -15,10 +15,10 @@ import { AppController } from "./app.controller";
                 }
                 return result.data;
             },
-            isGlobal: true,
-        }),
+            isGlobal: true
+        })
     ],
     controllers: [AppController],
-    providers: [],
+    providers: []
 })
 export class AppModule {}
