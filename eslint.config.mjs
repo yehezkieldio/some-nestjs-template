@@ -7,9 +7,9 @@ import tseslint from "typescript-eslint";
 
 export default defineConfig([
     globalIgnores(["**/node_modules/**", "**/dist/**", "**/build/**", "**.json"]),
-    // {
-    //     ignores: ["eslint.config.mjs", "jest.config.mjs", "jest.setup.mjs", "test/jest.config.e2e.mjs"]
-    // },
+    {
+        ignores: ["eslint.config.mjs", "jest.config.mjs", "jest.setup.mjs", "test/jest.config.e2e.mjs"]
+    },
     { files: ["**/*.{js,mjs,cjs,ts}"] },
     {
         files: ["**/*.{js,mjs,cjs,ts}"],

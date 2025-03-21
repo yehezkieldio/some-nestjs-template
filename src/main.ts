@@ -39,7 +39,7 @@ async function bootstrap(): Promise<void> {
         })
     );
 
-    const port: number = Number(process.env.API_PORT) || 3000;
+    const port: number = Number(process.env.API_PORT) || 3001;
     const hostname: string = process.env.API_HOSTNAME ?? "0.0.0.0";
 
     await app.listen(port, hostname);

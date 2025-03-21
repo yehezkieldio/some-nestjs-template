@@ -1,19 +1,14 @@
 import { Controller, Get } from "@nestjs/common";
-import { createZodDto } from "nestjs-zod";
-import { z } from "zod";
-
-const HealthCheckSchema = z.object({
-    status: z.literal("ok")
-});
-
-class HealthCheckDTO extends createZodDto(HealthCheckSchema) {}
+import { startActiveSpan } from "#/opentelemetry/opentelemetry.module";
 
 @Controller()
 export class AppController {
     @Get("/health")
-    getHealthCheck(): HealthCheckDTO {
-        return {
-            status: "ok"
-        };
+    getHealthCheck() {
+        return startActiveSpan("health", () => {
+            return {
+                status: "ok"
+            };
+        });
     }
 }
