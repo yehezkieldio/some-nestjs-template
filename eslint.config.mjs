@@ -6,9 +6,6 @@ import tseslint from "typescript-eslint";
 import perfectionist from "eslint-plugin-perfectionist";
 
 export default tseslint.config(
-    {
-        ignores: ["eslint.config.mjs", "jest.config.mjs", "jest.setup.mjs", "test/jest.config.e2e.mjs"],
-    },
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
     eslintPluginPrettierRecommended,
@@ -25,6 +22,7 @@ export default tseslint.config(
                 tsconfigRootDir: import.meta.dirname,
             },
         },
+        ignores: ["eslint.config.mjs", "jest.config.mjs", "jest.setup.mjs", "test/jest.config.e2e.mjs"],
         plugins: {
             perfectionist,
         },
