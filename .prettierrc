@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json.schemastore.org/prettierrc",
+    "semi": true,
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "bracketSpacing": true,
+    "singleQuote": false,
+    "arrowParens": "always",
+    "quoteProps": "consistent",
+    "printWidth": 120,
+    "overrides": [
+        {
+            "files": ["**/.vscode/*.json", "**/tsconfig.json", "**/tsconfig.*.json"],
+            "options": {
+                "parser": "jsonc"
+            }
+        }
+    ]
+}
