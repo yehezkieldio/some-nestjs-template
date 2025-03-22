@@ -1,8 +1,5 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-grpc";
-import { BatchSpanProcessor, ConsoleSpanExporter } from "@opentelemetry/sdk-trace-node";
-import { OpenTelemetryModule } from "#/opentelemetry/opentelemetry.module";
 
 import { envSchema } from "./app.config";
 import { AppController } from "./app.controller";
@@ -19,18 +16,6 @@ import { AppController } from "./app.controller";
                 return result.data;
             },
             isGlobal: true
-        }),
-        OpenTelemetryModule.forRoot({
-            serviceName: "somenestjs",
-            spanProcessors: [
-                new BatchSpanProcessor(
-                    new OTLPTraceExporter({
-                        url: "http://localhost:4317",
-                        timeoutMillis: 10000
-                    })
-                ),
-                new BatchSpanProcessor(new ConsoleSpanExporter())
-            ]
         })
     ],
     controllers: [AppController],
